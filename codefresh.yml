@@ -6,3 +6,7 @@ steps:
         dockerfile: Dockerfile
         image-name: superfresh/lets-chat
         tag: codefresh
+push to registry:
+     type: push
+     candidate: ${{build-step}}
+     tag: ${{CF_BRANCH}}
